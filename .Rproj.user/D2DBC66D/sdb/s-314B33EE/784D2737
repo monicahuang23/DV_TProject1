@@ -1,0 +1,18 @@
+{
+    "contents" : "require(\"jsonlite\")\nrequire(\"RCurl\")\n# Change the USER and PASS below to be your UTEid\nfinal_grades <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query=\"select * from FINAL_GRADE where SCHOOLNUMBER is not null\"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521/PDBF15DV.usuniversi01134.oraclecloud.internal', USER='cs329e_mh42375', PASS='orcl_mh42375', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE), ))\n\nhead (final_grades)\n\n",
+    "created" : 1446070718145.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2990230344",
+    "id" : "784D2737",
+    "lastKnownWriteTime" : 1446093307,
+    "path" : "~/DataVisualization/DV_TProject1/01 Data/Final Grades.R",
+    "project_path" : "01 Data/Final Grades.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

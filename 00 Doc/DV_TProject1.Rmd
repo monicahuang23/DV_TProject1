@@ -26,40 +26,10 @@ source("../01 Data/ETL.R")
 ##**Part 2 Importing into SQL and creating dataframes**
 Next, we used the SQL statement and imported the data into SQL. We then took the data from SQL and put them into dataframes in R using this code below:
 ```{r, tidy=TRUE}
-source("../02 Data Wrangling/Final Grades.R",echo = TRUE)
+source("../01 Data/Final Grades.R",echo = TRUE)
 ```
 
-##**Part 3 Combining the three tables**
-To combine the tables, we used the school code of each school as the primary key that connects the three tables together. We used the tables in different types of joins in each of the data sets we created below.  
-```{r, include=FALSE}
-source("../02 Data Wrangling/ColumnNameFix.R")
-```  
-  
-##**Part 4 Creating interesting graphics through data wrangling**
-###**Data Set 1** 
-We joined all three of the data frames together for this data set. We did this by using an inner join by the unique school code, as it was a common factor in all three data frames. To wrangle the data, we selected the reading growth grade and math growth grades from the joined data set. We also selected EMH, which is an indicator of the level of school (elementary, middle, high school). We filtered out A schools because they did not have any data in these fields. 
-  
-For this data set, we compared the math growth score with the reading growth score for A schools, elementaries, high schools, and middle schools throughout the United States in 2011. Our code is written below: 
-```{r, warning=FALSE}
-source("../02 Data Wrangling/Set 1.R",echo = TRUE)
-```
-  
-We noticed that there is a correlation between the two growth scores. However, by coloring for EMH, we noticed that there is no correlation between the growth of the different types of schools. That is to say that high schoolers are not learning at a faster rate than elementary schools - the distrubution is spread out, there are just a lot more elementary and middle schools.  
-  
-###**Data Set 2**  
-For this dataset we joined all three data sets again, but added some more data wrangling in. This time we did a left join of the FRL and ENRL data sets by the school code column. We then mutated a column for the percentage of non-white students.  
-  
-We compared the percentage of non-white students against the percentage of students that recieved the Free/Reduced meal plan. We also colored by the school's project plan. From this we can see a couple of interesting things. The Performance plan is by far the most popular in elementary schools. However, as the percentage of non white students increases ther number of schools with the Turnaround Plan also increases. This can be seen to a lesser extent with middle schools as well. Also, we can see that there is indeed a correlation between percentage of non-white students and having free/reduced meal plans.  
-  
-```{r, warning=FALSE}  
-source("../02 Data Wrangling/Set 2.R",echo = TRUE)
-```    
-    
-###**Data Set 3**  
-For this dataset we did a full join of the enrl and final grade data sets.
+##**Part 3 Creating the plots in Tableau**
+Using Tableau, we extracted the data from Oracle and created three different types of plots for our dataset. 
 
-We compared the percentage of white students with the school's success measured in two ways: ranking and overall achievement score. It is very clear to see that schools with a higher percentage of white students not only achieved higher scores, but were ranked much higher. There are a couple of interesting things to note. There are two schools with very large student bodies that have a high percentage of white students but were ranked very poorly and performed poorly as well. This indicates that perhaps having too large a school with limited resources affects the students' ability to learn and achieve.
-  
-```{r, warning=FALSE}  
-source("../02 Data Wrangling/Set 3.R",echo = TRUE)
-```
+The first plot we created was a scatter plot. 
