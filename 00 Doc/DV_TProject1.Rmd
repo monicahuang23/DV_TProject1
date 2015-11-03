@@ -33,3 +33,9 @@ source("../01 Data/Final Grades.R",echo = TRUE)
 Using Tableau, we extracted the data from Oracle and created three different types of plots for our dataset. 
 
 The first plot we created was a scatter plot. 
+
+
+
+***The final plot we created was a bar chart.***
+This chart shows the overall average growth score for all of the different final plan types. Schools marked "AEC" are alternative education campuses, similar to "A" schools. These schools performed much lower than the other other schools. What's interesting is that these schools also had low rank totals (closer to 1), which means that they were ranked quite highly. Performance plans also scored the best for both AEC and regular schools.  
+![Plot #3: Bar Chart](../03 Visualizations/Bar Chart.jpg)
