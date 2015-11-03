@@ -23,18 +23,16 @@ The code that we used to extract, transform, and load the data into an sql state
 source("../01 Data/ETL.R")
 ```
 
-##**Part 2 Importing into SQL and creating dataframes**
-Next, we used the SQL statement and imported the data into SQL. We then took the data from SQL and put them into dataframes in R using this code below:
-```{r, tidy=TRUE}
-source("../01 Data/Final Grades.R",echo = TRUE)
-```
-
-##**Part 3 Creating the plots in Tableau**
+##**Part 2 Creating the plots in Tableau**
 Using Tableau, we extracted the data from Oracle and created three different types of plots for our dataset. 
 
-The first plot we created was a scatter plot. 
+***The first plot we created was a scatter plot.*** 
+This plot shows the relationship between the School Performance Framework graduation rate and the ranking of the schools. We can see from the graph that as the ranking of the school goes up (value goes down), the graduation rate of the schools increases. The color of the graph represents different Plantypes of the different schools. We can see from the graph that there is a cluster of Performance Plan type schools near the higher ranking schools and the higher graduation rates. Thus, we can conclude from this graph that schools with the Performance Plan tend to have higher rankings as well as higher graduation rates. 
+![Plot #1: Scatter Plot](../03 Visualizations/Scatter Plot.jpg)
 
-
+***The second plot we created was a crosstab.***
+This graph displays information concerning the district name and the type of school (A schools, elementary, middle school, high school). The colors of the crosstab are adjustable KPIs that label whether the school is a 'Great', 'Average', or 'Ok' school based on rank. Any school under the ranking of 1000 is considered 'Great'. Any school between 1000 and 10000 is considered 'Average', and all others are considered 'Ok'. We can see that most A schools and high schools tend to be in the 'Great' label, while other schools tend to vary between the three categories. 
+![Plot #2: Crosstab](../03 Visualizations/Crosstab.jpg)
 
 ***The final plot we created was a bar chart.***
 This chart shows the overall average growth score for all of the different final plan types. Schools marked "AEC" are alternative education campuses, similar to "A" schools. These schools performed much lower than the other other schools. What's interesting is that these schools also had low rank totals (closer to 1), which means that they were ranked quite highly. Performance plans also scored the best for both AEC and regular schools.  
