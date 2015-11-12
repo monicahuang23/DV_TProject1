@@ -35,7 +35,7 @@ Using R Studio, we extracted the data from Oracle and created three different ty
 ***The first plot we created was a scatter plot.*** 
 This plot shows the relationship between the School Performance Framework graduation rate and the ranking of the schools. We can see from the graph that as the ranking of the school goes up (value goes down), the graduation rate of the schools increases. The color of the graph represents different Plantypes of the different schools. We can see from the graph that there is a cluster of Performance Plan type schools near the higher ranking schools and the higher graduation rates. Thus, we can conclude from this graph that schools with the Performance Plan tend to have higher rankings as well as higher graduation rates. 
 
-```{r}
+```{r, warning = FALSE}
 source("../03 R SQL Visualisations/Scatter Plot.R")
 ```
 

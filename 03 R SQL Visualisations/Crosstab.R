@@ -19,7 +19,7 @@ from (select EMH, DISTRICTNAME, sum(RANK_TOT) as kpi
 order by DISTRICTNAME;"
 ')), httpheader=c(DB='jdbc:oracle:thin:@sayonara.microlab.cs.utexas.edu:1521:orcl', USER='C##cs329e_mh42375', PASS='orcl_mh42375', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON', p1=KPI_great, p2=KPI_average), verbose = TRUE)));View(df)
 
-ggplot() + 
+p <- ggplot() + 
   coord_cartesian() + 
   scale_x_discrete() +
   scale_y_discrete() +
@@ -41,3 +41,4 @@ ggplot() +
         geom_params=list(alpha=0.50), 
         position=position_identity()
   )
+print(p)

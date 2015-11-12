@@ -1,11 +1,13 @@
 require("jsonlite")
 require("RCurl")
+require(ggplot2)
+require(dplyr)
 
 # Change the USER and PASS below to be your UTEid
 df <- data.frame(fromJSON(getURL(URLencode('skipper.cs.utexas.edu:5001/rest/native/?query="select * from final_grade"'),httpheader=c(DB='jdbc:oracle:thin:@sayonara.microlab.cs.utexas.edu:1521:orcl', USER='C##cs329e_mh42375', PASS='orcl_mh42375', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE), ))
 
 require(extrafont)
-ggplot() + 
+p <- ggplot() + 
   coord_cartesian() + 
   scale_x_continuous() +
   scale_y_continuous() +
@@ -23,3 +25,5 @@ ggplot() +
         #position=position_identity()
         position=position_jitter(width=0.3, height=0)
   )
+
+print(p)
