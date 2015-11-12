@@ -41,8 +41,14 @@ source("../03 R SQL Visualisations/Scatter Plot.R")
 
 ***The second plot we created was a crosstab.***
 This graph displays information concerning the district name and the type of school (A schools, elementary, middle school, high school). The colors of the crosstab are adjustable KPIs that label whether the school is a 'Great', 'Average', or 'Ok' school based on rank. Any school under the ranking of 1000 is considered 'Great'. Any school between 1000 and 10000 is considered 'Average', and all others are considered 'Ok'. We can see that most A schools and high schools tend to be in the 'Great' label, while other schools tend to vary between the three categories. 
-```{r}
+```{r, warning=FALSE}
 source("../03 R SQL Visualisations/Crosstab.R")
+```
+
+However, because our crosstab had too many results, the numbers merged together and it was difficult to read. Thus, we also created a graph that only displays the color of the KPI for each EMH and District Name. 
+
+```{r, warning = FALSE}
+source("../03 R SQL Visualisations/Crosstab_NoLabel.R")
 ```
 
 ***The final plot we created was a bar chart.***
