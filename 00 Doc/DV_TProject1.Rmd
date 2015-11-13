@@ -54,3 +54,9 @@ source("../03 R SQL Visualisations/Crosstab_NoLabel.R")
 ***The final plot we created was a bar chart.***
 This chart shows the overall average growth score for all of the different final plan types. Schools marked "AEC" are alternative education campuses, similar to "A" schools. These schools performed much lower than the other other schools. What's interesting is that these schools also had low rank totals (closer to 1), which means that they were ranked quite highly. Performance plans also scored the best for both AEC and regular schools.  
 
+##**Part 4 Blending Data**
+We blended two tables together to create new results. The tables we used consisted of the original table as well as another table depicting different ethnic groups within the school.   
+  
+***Tableau***   
+In Tableau, we combined the two datasets connected by the school name. We filtered out the schools so that only schools in the district name: "Aspen 1" were included in the graph. Then, we looked at a bar chart of the schools in the district and their correspending math growth scores. We then colored the graph with the percentage of Asians in the schools. From the graph, we can see that the school that grew the most in math scores consisted of less Asians.   
+![](../03 R SQL Visualisations/Blended Data.jpg)
