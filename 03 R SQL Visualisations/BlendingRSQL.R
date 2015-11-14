@@ -39,10 +39,6 @@ p <- ggplot() +
         geom_params=list(), 
         position=position_identity(),
   ) +
-  annotate("text", label = '12' , x = 1, 12.3, size = 5, colour = "black") +
-  annotate("text", label = '7' , x = 2, 7.3, size = 5, colour = "black") +
-  annotate("text", label = '8' , x = 3, 8.3, size = 5, colour = "black") +
-  annotate("text", label = '9' , x = 4, 9.3, size = 5, colour = "black") +
   theme(axis.text.x = element_text(size  = 8, angle = 20, hjust = 1, vjust = 1))
 
 print(p) 
