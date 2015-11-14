@@ -28,10 +28,12 @@ p <- ggplot() +
         geom="bar",
         geom_params=list(), 
         position=position_identity(),
-        scale_fill_gradient(low = "#132B43", high = "#56B1F7", guide = "colourbar")
   ) +
-  geom_hline(aes(yintercept=avg_read))+
+  geom_hline(aes(yintercept=avg_read, color = "red"))+
   geom_hline(aes(yintercept=avg_math))+
+  annotate("text", label = "Avg Reading Growth Grade", x = 2, 6.3, size = 4, colour = "red") +
+  annotate("text", label = "Avg Math Growth Grade", x = 2, 7, size = 4, colour = "black") +
+  scale_fill_gradient(low = "#132B43", high = "#56B1F7")+
   theme(axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))
   
 print(p) 

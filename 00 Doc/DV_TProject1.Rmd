@@ -63,3 +63,10 @@ We blended two tables together to create new results. The tables we used consist
 ***Tableau***   
 In Tableau, we combined the two datasets connected by the school name. We filtered out the schools so that only schools in the district name: "Aspen 1" were included in the graph. Then, we looked at a bar chart of the schools in the district and their correspending math growth scores. We then colored the graph with the percentage of Asians in the schools. From the graph, we can see that the school that grew the most in math scores consisted of less Asians.   
 ![](../03 R SQL Visualisations/Blended Data.jpg)
+
+***R/SQL***
+
+In SQL, we got both of the data sets from Oracle. In R, we combined the two datasets connected by the school code. We filtered out the schools so that only schools in the district name: "Aspen 1" were included in the graph. Then, we looked at a bar chart of the schools in the district and their correspending math growth scores. We then colored the graph with the percentage of Asians in the schools. From the graph, we can see that the school that grew the most in math scores consisted of less Asians.   
+```{r, warning=FALSE}
+source("../03 R SQL Visualisations/BlendingRSQL.R")
+```
